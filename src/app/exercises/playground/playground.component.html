@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3 text-center">
+            <button (click)="onCreateServer()" [disabled]="!allowNewServer" class="btn btn-primary">Click</button>
+            <p *ngIf="serverCreated">{{ createServer }}</p>
+            <!-- <input type="text" class="form-control" (input)="onUserInput($event)"> -->
+            <input type="text" class="form-control" [(ngModel)]="serverName">
+            <!-- <p>{{ serverName }}</p> -->
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-3 text-center">
+            <input type="text" [(ngModel)]="username" class="form-control">
+            <p [ngStyle]="{backgroundColor: getColor()}" >{{ username }}</p>
+            <button (click)="onReset()" [disabled]="username === ''" class="btn btn-success">Click</button>
+        </div>
+    </div>
+</div>
