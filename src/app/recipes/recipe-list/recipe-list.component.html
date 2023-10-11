@@ -1,1 +1,20 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item d-flex bg-success my-3 p-2 text-light" *ngFor="let recipe of recipes">
+            <div class="me-auto">
+                <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+                <p class="list-group-item-next">{{ recipe.description }}</p>
+            </div>
+            <span>
+                <img [src]="recipe.imageUrl" alt="" class="img-responsive" style="max-height: 80px;">
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-item>
+    </div>
+</div>
