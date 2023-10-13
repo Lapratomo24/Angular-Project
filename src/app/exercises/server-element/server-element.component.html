@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div *ngIf="element.type === 'server'" class="card border-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">{{ element.name }}</div>
+                <div class="card-body text-danger">
+                    <p class="card-text">{{ element.content }}</p>
+                </div>
+            </div>
+
+            <div *ngIf="element.type === 'blueprint'" class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">{{ element.name }}</div>
+                <div class="card-body text-primary">
+                    <p class="card-text">{{ element.content }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
